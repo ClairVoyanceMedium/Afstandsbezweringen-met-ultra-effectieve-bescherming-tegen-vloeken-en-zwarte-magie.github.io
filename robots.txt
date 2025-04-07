@@ -1,42 +1,100 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# Robots.txt geoptimaliseerd voor 2025 - Overstijgt excellentie
+# Ontworpen voor Nederlandstalige markt, AI, Google AI, spraakassistenten en geavanceerde SEO
+# Site: https://clairvoyancemedium.github.io/Afstandsbezweringen-met-ultra-effectieve-bescherming-tegen-vloeken-en-zwarte-magie.github.io/
+# Laatste update: 09/03/2025 14:00 GMT
+# Opmerking: Test met Google Search Console en robotstxt.org om te valideren
+
+##########################
+# Algemene Toestemming   #
+##########################
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
-Disallow: /private/
+Disallow: /privé/            # Privémappen (bijv. admin, scripts)
+Disallow: /tijdelijk/        # Tijdelijke mappen
+Disallow: /*?*               # Voorkomt gedupliceerde inhoud (URL-parameters)
+Allow: /*.css$               # CSS voor optimale weergave (toegestaan voor iedereen)
+Allow: /*.js$                # Essentiële JS (toegestaan voor iedereen)
+Allow: /*.pdf$               # Strategische PDF's toegestaan (bijv. gidsen)
+Allow: /                     # Standaardtoestemming
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
-
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
+########################################
+# Googlebot (inclusief Google AI 2025) #
+########################################
 User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
+Disallow: /privé/
+Disallow: /tijdelijk/
+Allow: /rituelen/
+Allow: /bescherming/
+Allow: /onttovering/
+
+###########################################
+# Spraakassistenten                      #
+###########################################
+User-agent: Googlebot-Voice
+Disallow: /privé/
+Disallow: /tijdelijk/
+Allow: /veelgestelde-vragen/
+Allow: /eenvoudige-rituelen/
+Allow: /adviezen/
+User-agent: Amazonbot        # Hypothetisch voor Alexa
+Disallow: /privé/
+Disallow: /tijdelijk/
+Allow: /veelgestelde-vragen/
+Allow: /adviezen/
+User-agent: Applebot         # Hypothetisch voor Siri
+Disallow: /privé/
+Disallow: /tijdelijk/
+Allow: /veelgestelde-vragen/
+Allow: /adviezen/
+
+###########################################
+# Bing (Nederlandstalige markt buiten Google) #
+###########################################
 User-agent: Bingbot
-Allow: /
+Disallow: /privé/
+Disallow: /tijdelijk/
 
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
+#################################
+# Blokkering van ongewenste bots #
+#################################
+User-agent: AhrefsBot
 Disallow: /
-User-agent: EvilScraper
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
 Disallow: /
 
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+##################################################
+# Partners en Google-analysetools                #
+##################################################
+User-agent: Mediapartners-Google
+Disallow: /privé/
+User-agent: AdsBot-Google
+Disallow: /privé/
+
+##################################################
+# Opkomende AI-crawlers (vooruitzicht 2025)     #
+##################################################
+User-agent: xAI-Crawler
+Disallow: /privé/
+User-agent: OpenAI-Crawler
+Disallow: /privé/
+User-agent: AnthropicBot
+Disallow: /privé/
+User-agent: Qwantify         # Nederlandstalige focus
+Disallow: /privé/
+
+##################################################
+# Geavanceerde optimalisatie (mobile-first)     #
+##################################################
+User-agent: Googlebot-Mobile
+Disallow: /privé/
+Disallow: /tijdelijk/
+Allow: /rituelen/
+Allow: /bescherming/
+Allow: /onttovering/
+
+##################
+# Sitemap en crawl #
+##################
+Sitemap: https://clairvoyancemedium.github.io/Afstandsbezweringen-met-ultra-effectieve-bescherming-tegen-vloeken-en-zwarte-magie.github.io/sitemap.xml
+Crawl-delay: 0.5
